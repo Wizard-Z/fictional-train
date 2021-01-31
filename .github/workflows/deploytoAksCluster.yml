@@ -1,5 +1,8 @@
-name: Deploy to AKS [deployment-cluster]
-on: [push]
+name: Deploy to AKS -> deployment
+on:
+  push: 
+    branches:
+      - 'deployment'
 jobs:
   build-test:
     name: Test - Unit tests
