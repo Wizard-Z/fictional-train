@@ -12,8 +12,10 @@ jobs:
           java-version: 11
       - name: Maven Package
         run: mvn clean package -DskipTests
+        working-directory: backend
       - name: Maven Verify
         run: mvn clean verify  
+        working-directory: backend
      
   deploy:
     runs-on: ubuntu-latest
