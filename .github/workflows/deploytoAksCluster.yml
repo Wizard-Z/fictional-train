@@ -20,6 +20,7 @@ jobs:
       run: |
         docker build "$GITHUB_WORKSPACE/backend" -f  "backend/Dockerfile" -t insuranceregistry.azurecr.io/insuranceteststagging:${{ github.sha }}
         docker push insuranceregistry.azurecr.io/insuranceteststagging:${{ github.sha }}
+      working-directory: backend
     
     - uses: azure/k8s-set-context@v1
       with:
