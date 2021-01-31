@@ -62,7 +62,7 @@ jobs:
       with:
         namespace: default
         manifests: |
-          backend/K8s/spring-boot-deployment.yml
+          manifests/deployment-backend-stagging.yml
         images: |
           insuranceregistry.azurecr.io/insuranceteststagging:${{ github.sha }}
         imagepullsecrets: |
